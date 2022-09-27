@@ -1,0 +1,122 @@
+/* header */
+header{
+    width: 100%;
+    background-color: $claro;
+    z-index: 2;
+    display: flex;
+    align-items:baseline;
+    flex-wrap: nowrap;
+    position: fixed;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    .title{
+        h1{
+            font-size: 2.5em;
+            font-family: 'PT Sans Narrow', sans-serif;
+            margin: 0;
+            color: $oscuro;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }    
+    
+}
+/* menu */
+.menu{
+    ul{
+        list-style: none;
+        background-color: #E0ECE9;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+        li{
+            display: inline-block;
+            position:relative;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $oscuro;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+            ul {
+                position: absolute;
+                display: none;
+                z-index: 3;
+                li {
+                    display: block;
+                    background-color: $oscuro;
+                    color: #E0ECE9;
+                }
+            }
+            &:hover ul {
+                display:block;
+            }
+        }
+    }
+
+}
+/* footer */
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    h3{
+        font-size: 2em;
+        font-family: 'PT Sans Narrow', sans-serif;
+        color: $oscuro;
+        margin: 10px;
+    }
+    .contacto{
+        li{
+            display: inline;
+            margin: 10px;
+            img{
+                width: 60px;
+            }
+        }
+    }
+    h4{
+        margin: 20px;
+        align-self: flex-end;
+        a{
+            text-decoration: none;
+            color: $oscuro;
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (max-width: 760px){
+    header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        .title{
+            h1{
+                margin: 0px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 460px){
+    .menu{
+        ul{
+        flex-direction: column;
+           li{
+                padding: 0px;
+                ul{
+                    width: 100%;
+                }
+            }
+        }
+    }
+ }

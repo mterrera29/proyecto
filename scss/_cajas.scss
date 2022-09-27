@@ -1,0 +1,58 @@
+/* recursos */
+.recu{
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    .caja{
+        border-radius: 5%;
+        margin: 10px;
+        font-size: 4em;
+        text-align: center;
+        line-height: 550px;
+        width: 350px;
+        height: 350px;
+        overflow:hidden;
+        color: $claro;
+        transition: all 0.5s ease;
+        a{
+            text-decoration: none;
+            color: $claro;
+        }
+        &:hover{
+            transform: scale(1.02, 1.02);
+        }
+    }
+    .historia{
+        background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
+        background-size: cover;
+    }
+    .geografía{
+        background-image: url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
+        background-size: cover;
+    }
+    .mapas{
+        background-image: url(https://static.vecteezy.com/system/resources/previews/001/382/864/large_2x/compass-lying-on-a-very-old-vintage-map-photo.jpg);
+        background-size: cover;
+    }
+    .artículos{
+        background-image: url(https://revistapublicando.org/revista/public/site/images/jgonzalonso/jonas-jacobsson-0frj2scuy4k-unsplash-1.jpg);
+        background-size: cover;
+        }
+    .peliculas{
+        background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20200505141128_1200.jpg);
+        background-size: cover;
+    }
+    .juegos{
+        background-image: url(https://academiaplay.es/wp-content/uploads/2017/06/web-ryse.jpg);
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 460px){
+    .recu{
+        margin: 5px;
+        width: 90%;
+    }
+}
