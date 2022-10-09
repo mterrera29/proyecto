@@ -11,10 +11,10 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     .btn-menu{
+        display: none;
         img{
             width: 20px;
             cursor: pointer;
-            display: none;
         }
     }
     .title{
@@ -70,11 +70,14 @@ header{
                 display:block;
             }
         }
-        label{
-            img{
-                width: 20px;
-                cursor: pointer;
-            }
+        
+    }
+    label{
+            
+        img{
+            visibility: hidden;
+            width: 20px;
+            cursor: pointer;
         }
     }
 }
@@ -127,42 +130,50 @@ footer{
         flex-direction: row;
         justify-content: left;
         padding: 0px;
-        .title{
-            padding: 5px;
-        }
+        padding-bottom: 5px;
         .btn-menu{
+            display: inline-block;
             margin: 10px;
-            img{
-                display: flex;
-            }
         }
     }
     .menu{
         position: absolute;
         background-color: #E0ECE9;
-        margin-top: 110px;
-        padding-top: 50px;
         width: 100%;
-        height: 200px;
+		height: 100vh;
+		top: 0;left: 0;
+        width: 100%;
         transform: translateX(-100%);
         opacity: 0;
 		visibility: hidden;
         transition: all 500ms ease;
+        .title{
+            padding: 5px;
+        }
         ul{
-            align-self: center;
-            position: relative;
             flex-direction: column;
             li{
-                padding: 0px;
-                    ul{
-                        width: 100%;
+                padding: 20px;
+                padding-left: 0;
+                padding-right: 0;
+                ul{
+                    width: 100%;
+                    li{
                     }
+                    
+                }
+
             }
+            
         }
         label{
+            
             position: absolute;
             right: 5px;
             top: 5px;
+            img{
+                visibility: visible;
+            }
         }
     }
     #btn-menu:checked ~ .menu{
