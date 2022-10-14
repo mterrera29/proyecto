@@ -1,33 +1,49 @@
 /* recursos */
 .recu{
     grid-area: main;
-    display: flex;
+    .caja-titulo{
+        h1{
+            color: $oscuro;
+            text-align: center;
+        }  
+    }
+    .cajas{
+        display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
-    .caja{
-        border-radius: 5%;
-        margin: 10px;
-        font-size: 4em;
-        text-align: center;
-        line-height: 550px;
-        width: 350px;
-        height: 350px;
-        overflow:hidden;
-        color: $claro;
-        transition: all 0.5s ease;
-        a{
+        .caja{
+            background-color: black;
+            background-position: center bottom;
+            border-radius: 5%;
+            margin: 10px;
+            line-height: 550px;
+            width: 300px;
+            height: 220px;
+            overflow:hidden;
+            transition: all 0.5s ease;
             text-decoration: none;
-            color: $claro;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: flex-end;
+            h3{
+                text-decoration: none;
+                color: $claro;
+                font-size: 4em;
+            }
+            &:hover{
+                transform: scale(1.02, 1.02);
+            }
+            
         }
-        &:hover{
-            transform: scale(1.02, 1.02);
-        }
+
     }
     .historia{
         background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
         background-size: cover;
+        background-position: center bottom;
+    
     }
     .geografía{
         background-image: url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
@@ -50,9 +66,54 @@
         background-size: cover;
     }
 }
+.aside{
+    grid-area: aside;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .aside-texto{
+        h1{
+            color: $oscuro;
+            text-align: center;
+        }  
+    }
+    .acordeon{
+        width: 90%;
+        margin: 10px;
+        z-index: 1;
+        
+    }
+}
+.color-acordeon{
+    background-color: $oscuro;
+    color: $claro;
+    font-size: 20px;
+}
+.color-acordeon [aria-expanded="true"] {
+    color: $claro !important;
+    background-color: $oscuro;
+}
+.color-box{
+    background-color: $claro;
+    color: $oscuro;
+}
+.forma-acordeon{
+    height: 40px;
+    border: 3px solid;
+    color: $claro;
+}
 @media screen and (max-width: 460px){
     .recu{
         margin: 5px;
         width: 90%;
+        .cajas{
+            .caja{
+                height: 150px;
+                line-height: 230px;
+            }
+
+        }
     }
 }

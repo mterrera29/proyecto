@@ -11,17 +11,30 @@ body {
 }
 
 .gridContainer {
+  width: 95%;
+  margin: 0px, 0px, 0px 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 70%;
   grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content min-content min-content;
-  grid-template-areas: "head head" "sub sub" "main main" "footer footer";
+  grid-template-areas: "head head" "sub sub" "aside main" "footer footer";
   justify-items: center;
 }
 
+@media screen and (max-width: 1000px) {
+  .gridContainer {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .gridContainer {
+    grid-template-areas: "head head" "sub sub" "aside aside" "main main" "footer footer";
+  }
+}
 /* header */
 header {
   width: 100%;
+  height: 55px;
   background-color: #E0ECE9;
   z-index: 2;
   display: flex;
@@ -66,7 +79,7 @@ header input {
   display: inline-block;
   position: relative;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 .menu ul li a {
@@ -128,9 +141,13 @@ footer h4 a {
 
 @media screen and (max-width: 760px) {
   header {
+    height: 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  header .menu {
+    height: 50px;
   }
   header .title h1 {
     margin: 0px;
@@ -142,12 +159,13 @@ footer h4 a {
     justify-content: left;
     padding: 0px;
     padding-bottom: 5px;
+    height: 50px;
   }
   header .btn-menu {
     display: inline-block;
     margin: 10px;
   }
-  .menu {
+  header .menu {
     position: absolute;
     background-color: #E0ECE9;
     width: 100%;
@@ -160,26 +178,28 @@ footer h4 a {
     visibility: hidden;
     transition: all 500ms ease;
   }
-  .menu .title {
+  header .menu .title {
     padding: 5px;
   }
-  .menu ul {
+  header .menu ul {
     flex-direction: column;
   }
-  .menu ul li {
+  header .menu ul li {
     padding: 20px;
     padding-left: 0;
     padding-right: 0;
   }
-  .menu ul li ul {
-    width: 100%;
+  header .menu ul li ul {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  .menu label {
+  header .menu label {
     position: absolute;
     right: 5px;
     top: 5px;
   }
-  .menu label img {
+  header .menu label img {
     visibility: visible;
   }
   #btn-menu:checked ~ .menu {
@@ -213,6 +233,9 @@ footer h4 a {
   .subtitulo {
     margin-top: 60px;
   }
+  .subtitulo .sub {
+    font-size: 4em;
+  }
 }
 @media screen and (max-width: 460px) {
   .subtitulo {
@@ -222,34 +245,45 @@ footer h4 a {
 /* recursos */
 .recu {
   grid-area: main;
+}
+.recu .caja-titulo h1 {
+  color: #629C8A;
+  text-align: center;
+}
+.recu .cajas {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
 }
-.recu .caja {
+.recu .cajas .caja {
+  background-color: black;
+  background-position: center bottom;
   border-radius: 5%;
   margin: 10px;
-  font-size: 4em;
-  text-align: center;
   line-height: 550px;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 220px;
   overflow: hidden;
-  color: #E0ECE9;
   transition: all 0.5s ease;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
 }
-.recu .caja a {
+.recu .cajas .caja h3 {
   text-decoration: none;
   color: #E0ECE9;
+  font-size: 4em;
 }
-.recu .caja:hover {
+.recu .cajas .caja:hover {
   transform: scale(1.02, 1.02);
 }
 .recu .historia {
   background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
   background-size: cover;
+  background-position: center bottom;
 }
 .recu .geografía {
   background-image: url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
@@ -272,9 +306,53 @@ footer h4 a {
   background-size: cover;
 }
 
+.aside {
+  grid-area: aside;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.aside .aside-texto h1 {
+  color: #629C8A;
+  text-align: center;
+}
+.aside .acordeon {
+  width: 90%;
+  margin: 10px;
+  z-index: 1;
+}
+
+.color-acordeon {
+  background-color: #629C8A;
+  color: #E0ECE9;
+  font-size: 20px;
+}
+
+.color-acordeon [aria-expanded=true] {
+  color: #E0ECE9 !important;
+  background-color: #629C8A;
+}
+
+.color-box {
+  background-color: #E0ECE9;
+  color: #629C8A;
+}
+
+.forma-acordeon {
+  height: 40px;
+  border: 3px solid;
+  color: #E0ECE9;
+}
+
 @media screen and (max-width: 460px) {
   .recu {
     margin: 5px;
     width: 90%;
+  }
+  .recu .cajas .caja {
+    height: 150px;
+    line-height: 230px;
   }
 }/*# sourceMappingURL=estilo.css.map */

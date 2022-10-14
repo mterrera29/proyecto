@@ -18,10 +18,15 @@
         color: #629C8A;
     }
 }
+
 @media screen and (max-width: 760px){
     .subtitulo{
         margin-top: 60px;
+        .sub{
+            font-size: 4em;
+        }
     }
+
 }
 @media screen and (max-width: 460px){
     .subtitulo{

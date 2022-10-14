@@ -3,13 +3,31 @@ body{
     font-family: 'PT Sans Narrow', sans-serif;
 }
 .gridContainer{
+    width: 95%;
+    margin: 0px,0px,0px 0px;
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 30% 70%;
     grid-template-rows: min-content min-content min-content min-content min-content;
     grid-template-areas: 
     "head head"
     "sub sub"
-    "main main"
+    "aside main"
     "footer footer";
     justify-items: center;
+}
+@media screen and (max-width: 1000px){
+    .gridContainer{
+        grid-template-columns: 50% 50%;
+
+    }
+}
+@media screen and (max-width: 760px){
+    .gridContainer{
+        grid-template-areas: 
+        "head head"
+        "sub sub"
+        "aside aside"
+        "main main"
+        "footer footer";
+    }
 }
