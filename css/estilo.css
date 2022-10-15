@@ -102,6 +102,9 @@ header input {
 .menu ul li:hover ul {
   display: block;
 }
+.menu ul .redes {
+  display: none;
+}
 .menu label img {
   visibility: hidden;
   width: 20px;
@@ -122,23 +125,45 @@ footer h3 {
   color: #629C8A;
   margin: 10px;
 }
+footer .contacto {
+  margin-top: 50px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 footer .contacto li {
-  display: inline;
   margin: 10px;
+  font-size: 30px;
+  color: #629C8A;
+  list-style: none;
 }
-footer .contacto li img {
-  width: 60px;
-}
-footer h4 {
-  margin: 20px;
-  align-self: flex-end;
-}
-footer h4 a {
+footer .contacto li a {
   text-decoration: none;
   color: #629C8A;
+}
+footer .contacto li a i {
+  color: #629C8A;
+  font-size: 30px;
+}
+footer .contacto li a:link, footer .contacto li a:visited, footer .contacto li a:active {
+  text-decoration: none;
+  color: #629C8A;
+}
+footer .arriba-flecha {
+  align-self: flex-end;
+}
+footer .arriba-flecha a {
+  text-decoration: none;
   font-size: 3rem;
+  color: #629C8A;
 }
 
+@media screen and (max-width: 1000px) {
+  footer .contacto {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 760px) {
   header {
     height: 100px;
@@ -151,6 +176,9 @@ footer h4 a {
   }
   header .title h1 {
     margin: 0px;
+  }
+  .contacto {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 460px) {
@@ -190,9 +218,16 @@ footer h4 a {
     padding-right: 0;
   }
   header .menu ul li ul {
-    width: 80%;
-    margin-left: 10%;
+    width: 40%;
+    margin-left: 30%;
     margin-right: 10%;
+  }
+  header .menu ul .redes {
+    display: block;
+    align-content: flex-end;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #629C8A;
   }
   header .menu label {
     position: absolute;
@@ -206,6 +241,12 @@ footer h4 a {
     opacity: 1;
     visibility: visible;
     transform: translateX(0%);
+  }
+  footer .contacto a {
+    font-size: 20px;
+  }
+  footer .contacto li {
+    margin: 0;
   }
 }
 /* subtitulo */
@@ -323,6 +364,9 @@ footer h4 a {
   margin: 10px;
   z-index: 1;
 }
+.aside .acordeon .accordion:focus {
+  box-shadow: none;
+}
 
 .color-acordeon {
   background-color: #629C8A;
@@ -353,6 +397,5 @@ footer h4 a {
   }
   .recu .cajas .caja {
     height: 150px;
-    line-height: 230px;
   }
 }/*# sourceMappingURL=estilo.css.map */

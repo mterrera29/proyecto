@@ -1,3 +1,4 @@
+$accordion-button-focus-box-shadow:red;
 /* recursos */
 .recu{
     grid-area: main;
@@ -84,16 +85,24 @@
         margin: 10px;
         z-index: 1;
         
+        .accordion:focus{
+            box-shadow: none;
+         }
+        
     }
 }
 .color-acordeon{
     background-color: $oscuro;
     color: $claro;
     font-size: 20px;
+    
+
 }
 .color-acordeon [aria-expanded="true"] {
     color: $claro !important;
     background-color: $oscuro;
+    
+   
 }
 .color-box{
     background-color: $claro;
@@ -104,6 +113,7 @@
     border: 3px solid;
     color: $claro;
 }
+
 @media screen and (max-width: 460px){
     .recu{
         margin: 5px;
@@ -111,7 +121,6 @@
         .cajas{
             .caja{
                 height: 150px;
-                line-height: 230px;
             }
 
         }

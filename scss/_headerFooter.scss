@@ -71,6 +71,9 @@ header{
                 display:block;
             }
         }
+        .redes{
+            display: none;
+        }
         
     }
     label{
@@ -96,24 +99,49 @@ footer{
         margin: 10px;
     }
     .contacto{
+        margin-top: 50px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         li{
-            display: inline;
             margin: 10px;
-            img{
-                width: 60px;
+            font-size: 30px;
+            color: $oscuro;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $oscuro;
+                i{
+                    color: $oscuro;
+                    font-size: 30px;
+                }
+
+            }
+            a:link, a:visited, a:active{
+                text-decoration: none;
+                color: $oscuro;
             }
         }
     }
-    h4{
-        margin: 20px;
+    .arriba-flecha{
         align-self: flex-end;
         a{
+
             text-decoration: none;
-            color: $oscuro;
             font-size: 3rem;
+            color: $oscuro;
         }
     }
 }
+@media screen and (max-width: 1000px){
+    footer{
+        .contacto{
+            flex-direction: column;
+        }
+    }
+}
+
 @media screen and (max-width: 760px){
     header{
         height: 100px;
@@ -128,6 +156,9 @@ footer{
                 margin: 0px;
             }
         }
+    }
+    .contacto{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 460px){
@@ -162,14 +193,19 @@ footer{
                     padding-left: 0;
                     padding-right: 0;
                     ul{
-                        width: 80%;
-                        margin-left: 10%;
+                        width: 40%;
+                        margin-left: 30%;
                         margin-right: 10%;
-                        li{
-                        }
                         
                     }
     
+                }
+                .redes{
+                    display: block;
+                    align-content: flex-end;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $oscuro;
                 }
                 
             }
@@ -188,5 +224,15 @@ footer{
         opacity: 1;
 		visibility: visible;
         transform: translateX(0%);
+    }
+    footer{
+        .contacto{
+            a{
+                font-size: 20px;
+            }
+            li{
+                margin: 0;
+            }
+        }
     }
  }
