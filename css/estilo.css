@@ -10,9 +10,23 @@ body {
   font-family: "PT Sans Narrow", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #E0ECE9; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #629C8A; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #E0ECE9; /* creates padding around scroll thumb */
+}
+
 .gridContainer {
   width: 95%;
-  margin: 0px, 0px, 0px 0px;
+  margin: auto;
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
@@ -299,14 +313,11 @@ footer .arriba-flecha a {
 }
 .recu .cajas .caja {
   background-color: black;
-  background-position: center bottom;
-  border-radius: 5%;
+  border-radius: 8%;
   margin: 10px;
-  line-height: 550px;
-  width: 300px;
-  height: 220px;
+  width: 250px;
+  height: 200px;
   overflow: hidden;
-  transition: all 0.5s ease;
   text-decoration: none;
   display: flex;
   text-align: center;
@@ -318,8 +329,23 @@ footer .arriba-flecha a {
   color: #E0ECE9;
   font-size: 4em;
 }
+.recu .cajas .caja img {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  box-shadow: 2px -2px rgba(0, 0, 0, 0.356);
+  transform: translateX(-1px) translateY(1px);
+}
 .recu .cajas .caja:hover {
-  transform: scale(1.02, 1.02);
+  box-shadow: 5px -5px #629C8A;
+  transform: translateX(-5px) translateY(5px);
+}
+.recu .cajas .caja:hover img {
+  display: inline;
 }
 .recu .historia {
   background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
@@ -347,6 +373,15 @@ footer .arriba-flecha a {
   background-size: cover;
 }
 
+@media screen and (max-width: 460px) {
+  .recu {
+    margin: 5px;
+    width: 90%;
+  }
+  .recu .cajas .caja {
+    height: 150px;
+  }
+}
 .aside {
   grid-area: aside;
   width: 100%;
@@ -364,9 +399,6 @@ footer .arriba-flecha a {
   margin: 10px;
   z-index: 1;
 }
-.aside .acordeon .accordion:focus {
-  box-shadow: none;
-}
 
 .color-acordeon {
   background-color: #629C8A;
@@ -377,6 +409,14 @@ footer .arriba-flecha a {
 .color-acordeon [aria-expanded=true] {
   color: #E0ECE9 !important;
   background-color: #629C8A;
+  box-shadow: none;
+  border: 3px solid;
+  border-color: #E0ECE9;
+}
+
+.color-acordeon [aria-expanded=false] {
+  border: 3px solid;
+  border-color: #E0ECE9;
 }
 
 .color-box {
@@ -386,16 +426,132 @@ footer .arriba-flecha a {
 
 .forma-acordeon {
   height: 40px;
-  border: 3px solid;
   color: #E0ECE9;
+  box-shadow: none;
+  border: 3px solid;
+  border-color: #E0ECE9;
+}
+
+.accordion-button:is(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.gridContainer-historia {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-template-areas: "head head" "sub sub" "main main" "footer footer";
+  justify-items: center;
+}
+
+/* recursos */
+.recu-historia {
+  grid-area: main;
+}
+.recu-historia .caja-titulo-historia h1 {
+  color: #629C8A;
+  text-align: center;
+}
+.recu-historia .cajas-historia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.recu-historia .cajas-historia .caja-historia {
+  background-color: black;
+  border-radius: 8%;
+  margin: 10px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+}
+.recu-historia .cajas-historia .caja-historia h3 {
+  text-decoration: none;
+  color: #E0ECE9;
+  font-size: 2em;
+}
+.recu-historia .cajas-historia .caja-historia img {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100%;
+  box-shadow: 2px -2px rgba(0, 0, 0, 0.356);
+  transform: translateX(-1px) translateY(1px);
+}
+.recu-historia .cajas-historia .caja-historia:hover {
+  box-shadow: 4px -4px #629C8A;
+  transform: translateX(-4px) translateY(4px);
+}
+.recu-historia .cajas-historia .caja-historia:hover img {
+  display: inline;
+}
+.recu-historia .cajas-historia .historia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/historia/historia.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .hominidos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/hominidos.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .prehistoria {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/prehistoria.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .paleolitico {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/paleolitico.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .neolitico {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/neolitico.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .sumerios {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/sumerios.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .egipto {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/egipto.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .grecia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/grecia.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .roma {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/roma.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .americanas {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/americanas.jpg);
+  background-size: cover;
+}
+.recu-historia .cajas-historia .media {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/media.jpg);
+  background-size: cover;
 }
 
 @media screen and (max-width: 460px) {
-  .recu {
+  .recu-historia {
     margin: 5px;
     width: 90%;
   }
-  .recu .cajas .caja {
+  .recu-historia .cajas-historia .caja-historia {
     height: 150px;
   }
 }/*# sourceMappingURL=estilo.css.map */
