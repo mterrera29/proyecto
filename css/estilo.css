@@ -502,47 +502,47 @@ footer .arriba-flecha a {
   display: inline;
 }
 .recu-historia .cajas-historia .historia {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/historia/historia.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/historia/historia.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .hominidos {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/hominidos.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/hominidos.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .prehistoria {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/prehistoria.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/prehistoria.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .paleolitico {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/paleolitico.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/paleolitico.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .neolitico {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/neolitico.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/neolitico.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .sumerios {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/sumerios.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/sumerios.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .egipto {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/egipto.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/egipto.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .grecia {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/grecia.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/grecia.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .roma {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/roma.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/roma.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .americanas {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/americanas.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/americanas.jpg);
   background-size: cover;
 }
 .recu-historia .cajas-historia .media {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/historia/media.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/historia/media.jpg);
   background-size: cover;
 }
 
