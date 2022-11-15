@@ -13,9 +13,12 @@ header{
     padding-right: 20px;
     .btn-menu{
         display: none;
-        img{
+        i{
+            font-size: 20px;
             width: 20px;
             cursor: pointer;
+            color: $oscuro;
+            text-align: center;
         }
     }
     .title{
@@ -65,6 +68,9 @@ header{
                     display: block;
                     background-color: $oscuro;
                     color: #E0ECE9;
+                    a{
+                        color: $claro;
+                    }
                 }
             }
             &:hover ul {
@@ -78,10 +84,12 @@ header{
     }
     label{
             
-        img{
+        i{
             visibility: hidden;
             width: 20px;
             cursor: pointer;
+            font-size: 20px;
+            color: $oscuro;
         }
     }
 }
@@ -165,6 +173,7 @@ footer{
     header{
         flex-direction: row;
         justify-content: left;
+        width: 95%;
         padding: 0px;
         padding-bottom: 5px;
         height: 50px;
@@ -212,9 +221,9 @@ footer{
             label{
                 
                 position: absolute;
-                right: 5px;
+                right: 15px;
                 top: 5px;
-                img{
+                i{
                     visibility: visible;
                 }
             }

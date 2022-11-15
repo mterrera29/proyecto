@@ -18,18 +18,20 @@ body::-webkit-scrollbar {
   }
 
 
-
+.box{
+    margin: 0;
+}
 .gridContainer{
-    width: 95%;
-    margin: auto;
+    width: 100%;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: min-content min-content min-content min-content min-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    grid-template-rows: min-content min-content min-content min-content;
     grid-template-areas: 
-    "head head"
-    "sub sub"
-    "aside main"
-    "footer footer";
+    "head head head head"
+    "sub sub sub sub"
+    "aside main main main"
+    "footer footer footer footer";
     justify-items: center;
 }
 @media screen and (max-width: 1000px){

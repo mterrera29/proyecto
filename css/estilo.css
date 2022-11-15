@@ -24,14 +24,18 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #E0ECE9; /* creates padding around scroll thumb */
 }
 
+.box {
+  margin: 0;
+}
+
 .gridContainer {
-  width: 95%;
-  margin: auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
-  grid-template-rows: min-content min-content min-content min-content min-content;
-  grid-template-areas: "head head" "sub sub" "aside main" "footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-areas: "head head head head" "sub sub sub sub" "aside main main main" "footer footer footer footer";
   justify-items: center;
 }
 
@@ -62,9 +66,12 @@ header {
 header .btn-menu {
   display: none;
 }
-header .btn-menu img {
+header .btn-menu i {
+  font-size: 20px;
   width: 20px;
   cursor: pointer;
+  color: #629C8A;
+  text-align: center;
 }
 header .title h1 {
   font-size: 2.5em;
@@ -113,16 +120,21 @@ header input {
   background-color: #629C8A;
   color: #E0ECE9;
 }
+.menu ul li ul li a {
+  color: #E0ECE9;
+}
 .menu ul li:hover ul {
   display: block;
 }
 .menu ul .redes {
   display: none;
 }
-.menu label img {
+.menu label i {
   visibility: hidden;
   width: 20px;
   cursor: pointer;
+  font-size: 20px;
+  color: #629C8A;
 }
 
 /* footer */
@@ -199,6 +211,7 @@ footer .arriba-flecha a {
   header {
     flex-direction: row;
     justify-content: left;
+    width: 95%;
     padding: 0px;
     padding-bottom: 5px;
     height: 50px;
@@ -245,10 +258,10 @@ footer .arriba-flecha a {
   }
   header .menu label {
     position: absolute;
-    right: 5px;
+    right: 15px;
     top: 5px;
   }
-  header .menu label img {
+  header .menu label i {
     visibility: visible;
   }
   #btn-menu:checked ~ .menu {
@@ -304,6 +317,7 @@ footer .arriba-flecha a {
 .recu .caja-titulo h1 {
   color: #629C8A;
   text-align: center;
+  font-size: 3em;
 }
 .recu .cajas {
   display: flex;
@@ -316,7 +330,7 @@ footer .arriba-flecha a {
   border-radius: 8%;
   margin: 10px;
   width: 250px;
-  height: 200px;
+  height: 150px;
   overflow: hidden;
   text-decoration: none;
   display: flex;
@@ -327,18 +341,15 @@ footer .arriba-flecha a {
 .recu .cajas .caja h3 {
   text-decoration: none;
   color: #E0ECE9;
-  font-size: 4em;
+  font-size: 3em;
 }
 .recu .cajas .caja img {
   width: 50px;
   height: 50px;
   display: none;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 100%;
-  box-shadow: 2px -2px rgba(0, 0, 0, 0.356);
-  transform: translateX(-1px) translateY(1px);
+  top: 15px;
+  right: 15px;
 }
 .recu .cajas .caja:hover {
   box-shadow: 5px -5px #629C8A;
@@ -348,28 +359,28 @@ footer .arriba-flecha a {
   display: inline;
 }
 .recu .historia {
-  background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
   background-size: cover;
   background-position: center bottom;
 }
 .recu .geografía {
-  background-image: url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
   background-size: cover;
 }
 .recu .mapas {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/001/382/864/large_2x/compass-lying-on-a-very-old-vintage-map-photo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://static.vecteezy.com/system/resources/previews/001/382/864/large_2x/compass-lying-on-a-very-old-vintage-map-photo.jpg);
   background-size: cover;
 }
 .recu .artículos {
-  background-image: url(https://revistapublicando.org/revista/public/site/images/jgonzalonso/jonas-jacobsson-0frj2scuy4k-unsplash-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://revistapublicando.org/revista/public/site/images/jgonzalonso/jonas-jacobsson-0frj2scuy4k-unsplash-1.jpg);
   background-size: cover;
 }
 .recu .peliculas {
-  background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20200505141128_1200.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://img.europapress.es/fotoweb/fotonoticia_20200505141128_1200.jpg);
   background-size: cover;
 }
 .recu .juegos {
-  background-image: url(https://academiaplay.es/wp-content/uploads/2017/06/web-ryse.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://academiaplay.es/wp-content/uploads/2017/06/web-ryse.jpg);
   background-size: cover;
 }
 
@@ -393,6 +404,7 @@ footer .arriba-flecha a {
 .aside .aside-texto h1 {
   color: #629C8A;
   text-align: center;
+  font-size: 3em;
 }
 .aside .acordeon {
   width: 90%;
@@ -484,15 +496,12 @@ footer .arriba-flecha a {
   font-size: 2em;
 }
 .recu-historia .cajas-historia .caja-historia img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   display: none;
   position: absolute;
   top: 10px;
   right: 10px;
-  border-radius: 100%;
-  box-shadow: 2px -2px rgba(0, 0, 0, 0.356);
-  transform: translateX(-1px) translateY(1px);
 }
 .recu-historia .cajas-historia .caja-historia:hover {
   box-shadow: 4px -4px #629C8A;
@@ -553,5 +562,224 @@ footer .arriba-flecha a {
   }
   .recu-historia .cajas-historia .caja-historia {
     height: 150px;
+  }
+}
+.Sumerian-artifact-1-hex {
+  color: #f2ad5a;
+}
+
+.Sumerian-artifact-2-hex {
+  color: #F2C791;
+}
+
+.Sumerian-artifact-3-hex {
+  color: #D99B66;
+}
+
+.Sumerian-artifact-4-hex {
+  color: #BF754B;
+}
+
+.Sumerian-artifact-5-hex {
+  color: #8C4830;
+}
+
+.body-mesopotamia {
+  background-color: #F2C791;
+}
+
+.body-mesopotamia::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+.body-mesopotamia::-webkit-scrollbar-track {
+  background: #F2C791; /* color of the tracking area */
+}
+
+.body-mesopotamia::-webkit-scrollbar-thumb {
+  background-color: #8C4830; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #F2C791; /* creates padding around scroll thumb */
+}
+
+.gridContainer-mesopotamia {
+  background-color: #F2C791;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-template-areas: "head head" "sub sub" "main main" "aside aside" "footer footer";
+  justify-items: center;
+}
+.gridContainer-mesopotamia header {
+  background-color: #F2C791;
+}
+.gridContainer-mesopotamia header .btn-menu i {
+  color: #8C4830;
+}
+.gridContainer-mesopotamia header .title h1 {
+  color: #8C4830;
+}
+.gridContainer-mesopotamia header .menu ul {
+  background-color: #F2C791;
+}
+.gridContainer-mesopotamia header .menu ul li a {
+  color: #8C4830;
+}
+.gridContainer-mesopotamia header .menu ul li ul li {
+  background-color: #8C4830;
+  color: #F2C791;
+}
+.gridContainer-mesopotamia header .menu ul li ul li a {
+  color: #F2C791;
+}
+.gridContainer-mesopotamia header .menu label i {
+  color: #8C4830;
+}
+.gridContainer-mesopotamia .subtitulo {
+  background-color: #F2C791;
+}
+.gridContainer-mesopotamia .subtitulo .sub {
+  color: #8C4830;
+}
+.gridContainer-mesopotamia footer .contacto li {
+  margin: 10px;
+  font-size: 30px;
+  color: #8C4830;
+  list-style: none;
+}
+.gridContainer-mesopotamia footer .contacto li a {
+  text-decoration: none;
+  color: #8C4830;
+}
+.gridContainer-mesopotamia footer .contacto li a i {
+  color: #8C4830;
+  font-size: 30px;
+}
+.gridContainer-mesopotamia footer .contacto li a:link, .gridContainer-mesopotamia footer .contacto li a:visited, .gridContainer-mesopotamia footer .contacto li a:active {
+  text-decoration: none;
+  color: #8C4830;
+}
+.gridContainer-mesopotamia footer .arriba-flecha {
+  align-self: flex-end;
+}
+.gridContainer-mesopotamia footer .arriba-flecha a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: #8C4830;
+}
+
+/* recursos */
+.recu-mesopotamia {
+  grid-area: main;
+}
+.recu-mesopotamia .caja-titulo-sumerios h1 {
+  color: #629C8A;
+  text-align: center;
+}
+.recu-mesopotamia .cajas-mesopotamia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia {
+  background-color: #8C4830;
+  border-radius: 8%;
+  margin: 10px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+}
+.recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia h3 {
+  text-decoration: none;
+  color: #F2C791;
+  font-size: 2em;
+}
+.recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia img {
+  width: 55px;
+  height: 55px;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia:hover {
+  box-shadow: 4px -4px #8C4830;
+  transform: translateX(-4px) translateY(4px);
+}
+.recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia:hover img {
+  display: inline;
+}
+.recu-mesopotamia .cajas-mesopotamia .ubicacion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/historia/sumerios/ubicacion.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .sumerios {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/historia/sumerios/sumerios.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .ciudades {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/historia/sumerios/ciudades.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .zigurat {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/historia/sumerios/zigurat.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .cuneiforme {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/historia/sumerios/cuneiforme.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .leyes {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/historia/sumerios/leyes.jpg);
+  background-size: cover;
+}
+.recu-mesopotamia .cajas-mesopotamia .gilgamesh {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/historia/sumerios/gilgamesh.jpg);
+  background-size: cover;
+}
+
+aside {
+  grid-area: aside;
+  width: 80%;
+}
+aside h1 {
+  width: 100%;
+  font-size: 4em;
+  color: #8C4830;
+  text-align: center;
+  text-justify: auto;
+}
+aside h1 img {
+  width: 50px;
+  height: 50px;
+}
+aside p {
+  color: #8C4830;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 460px) {
+  header .menu-meso {
+    background-color: #F2C791;
+  }
+  .sub-mesopotamia {
+    font-size: 0.7em;
+  }
+  .recu-mesopotamia {
+    width: 90%;
+  }
+  .recu-mesopotamia .cajas-mesopotamia .caja-mesopotamia {
+    border-radius: 20px;
+    margin: 2;
+    height: 100px;
   }
 }/*# sourceMappingURL=estilo.css.map */

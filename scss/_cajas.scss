@@ -6,6 +6,7 @@ $accordion-button-focus-box-shadow:red;
         h1{
             color: $oscuro;
             text-align: center;
+            font-size: 3em;
         }  
     }
     .cajas{
@@ -18,7 +19,7 @@ $accordion-button-focus-box-shadow:red;
             border-radius: 8%;
             margin: 10px;
             width: 250px;
-            height: 200px;
+            height: 150px;
             overflow:hidden;
             text-decoration: none;
             display: flex;
@@ -28,18 +29,15 @@ $accordion-button-focus-box-shadow:red;
             h3{
                 text-decoration: none;
                 color: $claro;
-                font-size: 4em;
+                font-size: 3em;
             }
             img{
                 width: 50px;
                 height: 50px;
                 display: none;
                 position: absolute;
-                top: 10px;
-                right: 10px;
-                border-radius: 100%;
-                box-shadow:2px -2px rgba(0, 0, 0, 0.356);
-                transform: translateX(-1px) translateY(1px);
+                top: 15px;
+                right: 15px;
             }
             &:hover{
                 box-shadow:5px -5px $oscuro;
@@ -53,29 +51,29 @@ $accordion-button-focus-box-shadow:red;
 
     }
     .historia{
-        background-image: url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://plustatic.com/5124/conversions/ramas-historia-default.jpg);
         background-size: cover;
         background-position: center bottom;
     
     }
     .geografía{
-        background-image: url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://concepto.de/wp-content/uploads/2019/09/geografia-fisica-e1568415626753.jpg);
         background-size: cover;
     }
     .mapas{
-        background-image: url(https://static.vecteezy.com/system/resources/previews/001/382/864/large_2x/compass-lying-on-a-very-old-vintage-map-photo.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://static.vecteezy.com/system/resources/previews/001/382/864/large_2x/compass-lying-on-a-very-old-vintage-map-photo.jpg);
         background-size: cover;
     }
     .artículos{
-        background-image: url(https://revistapublicando.org/revista/public/site/images/jgonzalonso/jonas-jacobsson-0frj2scuy4k-unsplash-1.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://revistapublicando.org/revista/public/site/images/jgonzalonso/jonas-jacobsson-0frj2scuy4k-unsplash-1.jpg);
         background-size: cover;
         }
     .peliculas{
-        background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20200505141128_1200.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://img.europapress.es/fotoweb/fotonoticia_20200505141128_1200.jpg);
         background-size: cover;
     }
     .juegos{
-        background-image: url(https://academiaplay.es/wp-content/uploads/2017/06/web-ryse.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://academiaplay.es/wp-content/uploads/2017/06/web-ryse.jpg);
         background-size: cover;
     }
 }
